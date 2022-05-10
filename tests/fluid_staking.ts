@@ -20,8 +20,6 @@ describe("staking", () => {
   anchor.setProvider(anchor.AnchorProvider.env());
 
   let mint = null;
-  let falseMint = null;
-  let falseStakerAta = null;
   let rewardMint = null;
   let stakerAta = null;
   let managerRewardAta = null;
@@ -37,7 +35,6 @@ describe("staking", () => {
     console.log("funding client");
 
     const nftMint = await mintNFT(program.provider, staker, staker, staker, 1);
-    const falseNftMint = await mintNFT(program.provider, staker, staker, staker, 1);
 
     const rewardToken = await mintNFT(
       program.provider,
@@ -46,9 +43,6 @@ describe("staking", () => {
       manager,
       5000000
     );
-
-    falseMint = falseNftMint.tokenMint;
-    falseStakerAta = falseNftMint.tokenMint;
 
     mint = nftMint.tokenMint;
     stakerAta = nftMint.payerAta;

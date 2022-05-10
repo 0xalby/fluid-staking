@@ -4,7 +4,7 @@ use anchor_spl::token::{self};
 use instructions::*;
 use error::*;
 
-declare_id!("Fg6PaFpoGXkYsidMpWTK6W2BeZ7FEfcYkg476zPFsLnS");
+declare_id!("HX1JgCTVJ3LiTFaua9J6zqjYWm2SsA1Cnac3qsH2XPcM");
 
 pub mod instructions;
 pub mod state;
@@ -15,6 +15,7 @@ pub mod fluid_staking {
     use super::*;
 
     pub fn create_farm(ctx: Context<InitializeFarm>, tickrate: i64) -> Result<()> {
+
         let stake_farm = &mut ctx.accounts.stake_farm;
         stake_farm.manager = ctx.accounts.manager.key();
         stake_farm.bump = *ctx.bumps.get("stake_farm").unwrap();

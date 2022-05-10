@@ -1,7 +1,7 @@
 [features]
 seeds = false
 [programs.localnet]
-fluid_staking = "Fg6PaFpoGXkYsidMpWTK6W2BeZ7FEfcYkg476zPFsLnS"
+fluid_staking = "HX1JgCTVJ3LiTFaua9J6zqjYWm2SsA1Cnac3qsH2XPcM"
 
 [registry]
 url = "https://anchor.projectserum.com"
